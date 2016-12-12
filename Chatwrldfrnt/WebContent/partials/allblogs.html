@@ -1,0 +1,50 @@
+<head><style>
+body {
+background: url(http://www.alexanderdesignsgh.com/img/slide1-bg.jpg) no-repeat center fixed; 
+   background-size:cover;
+    border-radius: 5px;
+   
+    padding: 20px;
+     
+} 
+
+</style>
+
+</head>
+
+
+<body><div>
+	<hr>
+	
+	<h2>All Blogs</h2>
+	<span class="clearfix"></span>
+	</hr>
+	<hr>
+	</hr>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>blog id</th>
+				<th>Title</th>
+				<th>Description</th>
+				<th>category</th>
+				<th>postedby</th>
+				<th>Like</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="allblogs in blogs">
+				<td>{{allblogs.blog_id}}</td>
+				<td>{{allblogs.title}}</td>
+				<td>{{allblogs.description}}</td>
+				<td>{{allblogs.category}}</td>
+				<td>{{allblogs.postedby}}</td>
+				<td>{{allblogs.likes}}</td>
+				<td><button type="button" class="btn btn-primary btn-sm "
+						data-toggle="modal" data-target="#likeblog"
+						ng-click="likeBlog(allblogs)">Like</button></td>
+				 Likes={{likes}}
+			</tr>
+		</tbody>
+	</table></body>
